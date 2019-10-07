@@ -1,0 +1,133 @@
+<!doctype html>
+<html ng-app="webuiApp">
+<head>
+    <meta charset="utf-8"/>
+    <title>Brightics AccelAI</title>
+    <link rel="stylesheet" href="bootstrap-3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.4.1/css/bootstrap-theme.css">
+    <style>
+        ul>li{
+            line-height: 21pt;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/workbench">Brightics AccelAI</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <img class="navbar-brand" style="margin-left: 300px;" src="images/samsungsds_logo.jpg">
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                    <div class="list-group">
+                        <a href="" class="list-group-item">Home</a>
+                        <a href="#accelai1" class="list-group-item">AccelAI 1.6 Docs</a>
+                        <a href="#accelai2" class="list-group-item">AccelAI 2.0 Docs</a>
+                    </div>
+                </div>
+            
+                <div class="col-xs-12 col-sm-9">
+                    <h1>Brightics AccelAI</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.s</p>
+                    <h3 id="accelai1">AccelAI 1.6 Docs</h3>
+                    <table class="table table-bordered table-striped">
+                        <tbody id="body1"></tbody>
+                    </table>
+
+                    <h3 id="accelai2">AccelAI 2.0 Docs</h3>
+
+                    <table class="table table-bordered table-striped">
+                        <tbody id="body2"></tbody>
+                    </table>
+
+                    <script>
+                        const docsData = [
+                            {
+                                title: "SBrain Learning Experiment Management Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/1_SbrainExperimentManagement.html"
+                            },
+                            {
+                                title: "SBrain Transfer Learning Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/2_TransferLearning.html"
+                            },
+                            {
+                                title: "SBrain Keras Training Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/3_KerasTraining.html"
+                            },
+                            {
+                                title: "SBrain DataSet APIs Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/DataSetManagement-Basic.html"
+                            },
+                            {
+                                title: "Batch Inference and Inference Jobs API",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/BatchInference-And-InferenceJobs.html"
+                            },
+                            {
+                                title: "Best Model and Last Model",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/BestModel%20And%20Last%20Model.html"
+                            },
+                            {
+                                title: "DataPreparation Notebook",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/Cifar10%20DataPreparation%20For%20Learning%20Tutorials.html"
+                            },
+                            {
+                                title: "How to load dependent libraries in user functions",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/DependentLibraries.html"
+                            },
+                            {
+                                title: "Keras Early Stopping",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/KerasEarlyStopping.html"
+                            },
+                            {
+                                title: "SBrain Model Checkpoint Import Export Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/ModelCheckpoint-ExportImport.html"
+                            },
+                            {
+                                title: "Resnet model training on CIFAR10 odd numbered classes on SBrain",
+                                link: "https://brighticsaccelai.github.io/accelai1.6/Reference_CIFAR10-OddClassesTraining.html"
+                            }
+                        ]
+
+                        let renderRow = (el, i) => {
+                            return `<tr>
+                                <td>${i+1}</td>
+                                <td>${el.title}</td>
+                                <td><a href="${el.link}" target="_blank" title="Open in window"><span class="glyphicon glyphicon-new-window"></span></a></td>
+                            </tr>`
+                        }
+                        
+                        let table1 = document.querySelector("#body1");
+                        let htmlStr1 = "";
+                        docsData.map((row, i)=>{
+                            htmlStr1 += renderRow(row, i);
+                        })
+                        table1.innerHTML = htmlStr1;
+
+                        let table2 = document.querySelector("#body2");
+                        let htmlStr2 = "";
+                        docsData.map((row, i)=>{
+                            htmlStr2 += renderRow(row, i);
+                        })
+                        table2.innerHTML = htmlStr2;
+                    </script>
+
+                </div>
+            
+            </div>
+
+        </div>
+        
+</body>
+</html>

@@ -1,1 +1,0 @@
-# brighticsaccelai.github.io
