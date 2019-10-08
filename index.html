@@ -9,6 +9,11 @@
         ul>li{
             line-height: 21pt;
         }
+        #copy{
+            border-top: 1px solid navy;
+            font-size: 9pt;
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
@@ -30,27 +35,54 @@
         </nav>
         <div class="container">
             <div class="row row-offcanvas row-offcanvas-right">
-                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                <div class="col-sm-3 sidebar-offcanvas" id="sidebar">
                     <div class="list-group">
                         <a href="" class="list-group-item">Home</a>
-                        <a href="#accelai1" class="list-group-item">AccelAI 1.6 Docs</a>
-                        <a href="#accelai2" class="list-group-item">AccelAI 2.0 Docs</a>
+                        <a href="#accelai1" class="list-group-item">AccelAI API</a>
+                        <a href="#accelai2" class="list-group-item">AccelAI 1.6 Notebooks</a>
+                        <a href="#accelai3" class="list-group-item">AccelAI 2.0 Notebooks</a>
                     </div>
                 </div>
             
-                <div class="col-xs-12 col-sm-9">
+                <div class="col-sm-9">
                     <h1>Brightics AccelAI</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.s</p>
-                    <h3 id="accelai1">AccelAI 1.6 Docs</h3>
+                    <p>Brightics AccelAI is a service offering for Machine Learning and Distributed Deep Learning running on a cluster of GPU servers in a Data Center. AccelAI can be hosted on AWS, Azure, Google Cloud and on premises.</p>
+                    <p>Here are the main benefits:</p>
+                    <ul>
+                        <li>Reduce Model Training from week(s) to hour(s) using Server GPU Clusters</li>
+                        <li>Distributed Training in TensorFlow and Keras using Google Parameter Server Technology</li>
+                        <li>Distributed Training in PyTorch and Tensorflow using Uber Horovod Technology</li>
+                        <li>Distributed and Scalable Inference API and Jobs for Tensorflow, Keras and PyTorch</li>
+                        <li>Distributed Data Transformation using Python & OpenCV (without Spark Knowledge)</li>
+                        <li>Automated Experiments with Hyper-Parameter Search using Grids</li>
+                        <li>Collaboration & Asset Sharing amongst Data Scientist & AI Engineering Team Members</li>
+                        <li>Jupyter based Multi-User and Multi-Tenant Environment using Kubernetes</li>
+                        <li>Scalability as shown below:</li>
+                    </ul>
+                    <img src="images/graph.png" alt="" width="845" height="360">
+                    <h3 id="accelai1">AccelAI API</h3>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>in html: <a href="docs/accelaiApi.html" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></td>
+                                <td>in pdf: <a href="docs/accelaiApi.pdf" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3 id="accelai2">AccelAI 1.6 Notebooks</h3>
                     <table class="table table-bordered table-striped">
                         <tbody id="body1"></tbody>
                     </table>
 
-                    <h3 id="accelai2">AccelAI 2.0 Docs</h3>
-
+                    <h3 id="accelai3">AccelAI 2.0 Notebooks</h3>
                     <table class="table table-bordered table-striped">
                         <tbody id="body2"></tbody>
                     </table>
+                    <div id="copy">
+                        © 2018-2019 Samsung SDS All Rights Reserved | Contact email: <a href="mailto:sds.ai.team@samsung.com">sds.ai.team@samsung.com</a>
+                    </div>
+                    
 
                     <script>
                         const docsData = [
