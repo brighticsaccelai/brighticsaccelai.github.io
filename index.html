@@ -85,7 +85,7 @@
                     
 
                     <script>
-                        const docsData = [
+                        const docsData1 = [
                             {
                                 title: "SBrain Learning Experiment Management Tutorial",
                                 link: "https://brighticsaccelai.github.io/accelai1.6/1_SbrainExperimentManagement.html"
@@ -132,6 +132,109 @@
                             }
                         ]
 
+                        const docsData2 = [
+                            {
+                                title: "SBrain Learning Experiment Management Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/1_SbrainExperimentManagement.html"
+                            },
+                            {
+                                title: "SBrain Transfer Learning Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/2_TransferLearning.html"
+                            },
+                            {
+                                title: "SBrain Keras Training Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/3_KerasTraining.html"
+                            },
+                            {
+                                title: "Batch Inference and Inference Jobs API",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/BatchInference-And-InferenceJobs.html"
+                            },
+                            {
+                                title: "SBrain Model Training Using Input Function Then Inference Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/BatchInferenceFromFile.html"
+                            },
+                            {
+                                title: "Best Model and Last Model",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/BestModel And Last Model.html"
+                            },
+                            {
+                                title: "DataPreparation Notebook",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/Cifar10 DataPreparation For Learning Tutorials.html"
+                            },
+                            {
+                                title: "SBrain DataSet APIs Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/DataSetManagement-Basic.html"
+                            },
+                            {
+                                title: "DataSet Management-Filtering Data",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/DataSetManagement-FilteringData.html"
+                            },
+                            {
+                                title: "SBrain DataSet Retry API",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/DataSetManagement-RetryAPI.html"
+                            },
+                            {
+                                title: "How to load dependent libraries in user functions",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/DependentLibraries.html"
+                            },
+                            {
+                                title: "SBrain Model Training Using Input Function Then Inference Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/InferenceChangeOutputGraph.html"
+                            },
+                            {
+                                title: "SBrain Model Training Using Input Function Then Inference Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/InferenceWithNumpyArray.html"
+                            },
+                            {
+                                title: "Keras Early Stopping",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/KerasEarlyStopping.html"
+                            },
+                            {
+                                title: "SBrain Model Checkpoint Import Export Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/ModelCheckpoint-ExportImport.html"
+                            },
+                            {
+                                title: "SBrain Model Training Using Input Function Then Inference Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/ModelTrainingWithInputFunctionAndInference.html"
+                            },
+                            {
+                                title: "Resnet model training on CIFAR10 odd numbered classes on SBrain",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/Reference_CIFAR10-OddClassesTraining.html"
+                            },
+                            {
+                                title: "SBrain Model Training Early Stop Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/Training_EarlyStop.html"
+                            },
+                            {
+                                title: "SBrain Model Training Eval Metrics Tutorial",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/Training_Eval_Metrics.html"
+                            },
+                            {
+                                title: "Production Service",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/production-service.html"
+                            },
+                            {
+                                title: "pytorch BenchMarking",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/pytorch-BenchMarking.html"
+                            },
+                            {
+                                title: "pytorch training EarlyStopping",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/pytorch-training-EarlyStopping.html"
+                            },
+                            {
+                                title: "pytorch training and inference demo",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/pytorch-training-and-inference-demo.html"
+                            },
+                            {
+                                title: "pytorch training demo check Cancellation",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/pytorch-training-demo-checkCancellation.html"
+                            },
+                            {
+                                title: "pytorch training transfer",
+                                link: "https://brighticsaccelai.github.io/accelai2.0/pytorch-training-transfer.html"
+                            }
+                        ]
+
                         let renderRow = (el, i) => {
                             return `<tr>
                                 <td>${i+1}</td>
@@ -142,14 +245,14 @@
                         
                         let table1 = document.querySelector("#body1");
                         let htmlStr1 = "";
-                        docsData.map((row, i)=>{
+                        docsData1.map((row, i)=>{
                             htmlStr1 += renderRow(row, i);
                         })
                         table1.innerHTML = htmlStr1;
 
                         let table2 = document.querySelector("#body2");
                         let htmlStr2 = "";
-                        docsData.map((row, i)=>{
+                        docsData2.map((row, i)=>{
                             htmlStr2 += renderRow(row, i);
                         })
                         table2.innerHTML = htmlStr2;
