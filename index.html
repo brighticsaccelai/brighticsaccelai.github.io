@@ -85,7 +85,7 @@
                     
 
                     <script>
-                        const docsData1 = [
+                        var docsData1 = [
                             {
                                 title: "SBrain Learning Experiment Management Tutorial",
                                 link: "https://brighticsaccelai.github.io/accelai1.6/1_SbrainExperimentManagement.html"
@@ -132,7 +132,7 @@
                             }
                         ]
 
-                        const docsData2 = [
+                        var docsData2 = [
                             {
                                 title: "SBrain Learning Experiment Management Tutorial",
                                 link: "https://brighticsaccelai.github.io/accelai2.0/1_SbrainExperimentManagement.html"
@@ -235,24 +235,24 @@
                             }
                         ]
 
-                        let renderRow = (el, i) => {
-                            return `<tr>
-                                <td>${i+1}</td>
-                                <td>${el.title}</td>
-                                <td><a href="${el.link}" target="_blank" title="Open in window"><span class="glyphicon glyphicon-new-window"></span></a></td>
-                            </tr>`
+                        function renderRow(el, i){
+                            return '<tr>' +
+                                '<td>' + i+1 + '</td>' +
+                                '<td>' + el.title + '</td>' +
+                                '<td><a href="' + el.link + '" target="_blank" title="Open in window"><span class="glyphicon glyphicon-new-window"></span></a></td>' +
+                            '</tr>'
                         }
                         
-                        let table1 = document.querySelector("#body1");
-                        let htmlStr1 = "";
-                        docsData1.map((row, i)=>{
+                        var table1 = document.getElementById('body1');
+                        var htmlStr1 = "";
+                        docsData1.map(function(row, i){
                             htmlStr1 += renderRow(row, i);
                         })
                         table1.innerHTML = htmlStr1;
 
-                        let table2 = document.querySelector("#body2");
-                        let htmlStr2 = "";
-                        docsData2.map((row, i)=>{
+                        var table2 = document.getElementById('body2');
+                        var htmlStr2 = "";
+                        docsData2.map(function(row, i){
                             htmlStr2 += renderRow(row, i);
                         })
                         table2.innerHTML = htmlStr2;
